@@ -2,6 +2,7 @@ package com.example.pa_ad;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -50,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("JSONUSER",loginjson);
                 POSTVolley(loginjson);
 
+
             }
         });
 
@@ -71,6 +73,14 @@ public class MainActivity extends AppCompatActivity {
 
                        */
                         Log.d("Response",response);
+                        Intent intent = new Intent(MainActivity.this, principal_activity_main.class);
+
+                        Bundle b = new Bundle();
+                        b.putString("json",response);
+                        intent.putExtras(b);
+                        // Iniciamos la nueva actividad
+                        startActivity(intent);
+
                     }
                 },
                 new com.android.volley.Response.ErrorListener() {
