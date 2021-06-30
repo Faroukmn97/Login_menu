@@ -11,5 +11,4 @@
         android:text="@string/notificacions"
         android:layout_gravity="center"
         android:textSize="30dp"/>
-
 </FrameLayout>

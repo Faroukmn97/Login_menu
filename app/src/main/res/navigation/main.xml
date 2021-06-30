@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/menuProfileAdm"
         android:name="com.example.pa_ad.ProfileFragment"
-        android:label="rofile"
+        android:label="Profile"
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/menuCollectionAdm"

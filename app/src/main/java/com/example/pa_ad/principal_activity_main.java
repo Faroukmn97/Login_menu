@@ -57,6 +57,7 @@ Menu menu;
             Usuario.setText(bundle.getString("name") + " " + bundle.getString("last_name"));
             RolUsuario.setText(bundle.getString("type"));
             Glide.with(this).load(bundle.getString("imguser").replace('\\', '/')).into(foto);
+
             findViewById(R.id.imageMenu).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -64,7 +65,9 @@ Menu menu;
                 }
             });
             // NavigationView navigationView = findViewById(R.id.navigationView);
+            //AÑADIENDO ICONOS
             navigationView.setItemIconTintList(null);
+            //AÑADIENDO LOS FRAGMENTOS
             NavController navcontrller = Navigation.findNavController(this,R.id.NavHostFragment);
             NavigationUI.setupWithNavController(navigationView,navcontrller);
         }else{
