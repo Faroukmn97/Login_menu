@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">PA_AD</string>
+    <string name="profile">Profile</string>
+    <string name="profileadm">profileadm</string>
+    <string name="notificacions">Notificacions</string>
+    <string name="collectionadm">CollectionAdm</string>
+    <string name="inboxadm">InboxAdm</string>
+    <string name="ordersadm">OrdersAdm</string>
+    <string name="othersadm">OthersAdm</string>
+    <string name="settingsadm">SettingsAdm</string>
+    <string name="supportadm">SupportAdm</string>
+    <string name="aboutusadm">AboutUsAdm</string>
+    <string name="verified">verified</string>
+    <string name="jorge_molina">Jorge_Molina</string>
+    <string name="rol">Rol</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

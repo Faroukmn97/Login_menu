@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menuProfileAdm"
+        android:icon="@drawable/profile"
+        android:title="@string/profileadm"/>
+
+    <item
+        android:id="@+id/menuNotificationsAdm"
+        android:icon="@drawable/notifications"
+        android:title="@string/notificacions"/>
+
+    <item
+        android:id="@+id/menuCollectionAdm"
+        android:icon="@drawable/collection"
+        android:title="@string/collectionadm"/>
+
+    <item
+        android:id="@+id/menuInboxAdm"
+        android:icon="@drawable/inbox"
+        android:title="@string/inboxadm"/>
+
+    <item
+        android:id="@+id/menuOrdersAdm"
+        android:icon="@drawable/order"
+        android:title="@string/ordersadm"/>
+
+    <item android:id="@+id/menuother"
+        android:title="@string/othersadm">
+        <menu>
+            <item
+                android:id="@+id/menuSettingsAdm"
+                android:icon="@drawable/settings"
+                android:title="@string/settingsadm"/>
+
+            <item
+                android:id="@+id/menuSupportAdm"
+                android:icon="@drawable/support"
+                android:title="@string/supportadm"/>
+
+            <item
+                android:id="@+id/menuAboutUsAdm"
+                android:icon="@drawable/about"
+                android:title="@string/aboutusadm"/>
+
+        </menu>
+    </item>
+
+</menu>

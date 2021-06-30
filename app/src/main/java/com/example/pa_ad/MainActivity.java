@@ -1,6 +1,8 @@
 package com.example.pa_ad;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,6 +19,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.gson.JsonObject;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -50,8 +53,6 @@ public class MainActivity extends AppCompatActivity {
                         "}";
                 Log.d("JSONUSER",loginjson);
                 POSTVolley(loginjson);
-
-
             }
         });
 
@@ -70,16 +71,39 @@ public class MainActivity extends AppCompatActivity {
                       /*  MyLogs.info("ws todo bien");
                         //Procesar las respuesta y armar un Array con estos
                         MyLogs.detailedLog(response);
-
                        */
-                        Log.d("Response",response);
-                        Intent intent = new Intent(MainActivity.this, principal_activity_main.class);
+                        int size = response.length();
+                        JSONObject json_transform = null;
+                        try {
+                            if (size > 0)
+                            {
+                                json_transform = new JSONObject(response);
+                                if(json_transform.getString("flag").equals("true")){
+                                    Intent intent = new Intent(MainActivity.this, principal_activity_main.class);
+                                    Bundle b = new Bundle();
+                                    b.putString("name",json_transform.getJSONObject("data").getString("name"));
+                                    b.putString("last_name",json_transform.getJSONObject("data").getString("last_name"));
+                                    b.putString("type",json_transform.getJSONObject("data").getString("type"));
+                                    b.putString("imguser",json_transform.getJSONObject("data").getString("imguser"));
+                                    intent.putExtras(b);
+                                    startActivity(intent);
+                                }
+                                else{
+                                    Log.d("Data","Credenciales Incorrectas");
+                                }
 
-                        Bundle b = new Bundle();
-                        b.putString("json",response);
-                        intent.putExtras(b);
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                        // Log.d("Response",response);
+                       // Intent intent = new Intent(MainActivity.this, principal_activity_main.class);
+
+                       // Bundle b = new Bundle();
+                       // b.putString("json",response);
+                      //  intent.putExtras(b);
                         // Iniciamos la nueva actividad
-                        startActivity(intent);
+                      //  startActivity(intent);
 
                     }
                 },

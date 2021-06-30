@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/menuProfileAdm">
+
+    <fragment
+        android:id="@+id/menuProfileAdm"
+        android:name="com.example.pa_ad.ProfileFragment"
+        android:label="rofile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/menuCollectionAdm"
+        android:name="com.example.pa_ad.CollectionsFragment"
+        android:label="Collections"
+        tools:layout="@layout/fragment_collections" />
+    <fragment
+        android:id="@+id/menuNotificationsAdm"
+        android:name="com.example.pa_ad.NotificationsFragment"
+        android:label="Notifications"
+        tools:layout="@layout/fragment_notifications" />
+</navigation>
