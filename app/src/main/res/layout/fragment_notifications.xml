@@ -10,5 +10,6 @@
         android:layout_height="wrap_content"
         android:text="@string/notificacions"
         android:layout_gravity="center"
-        android:textSize="30dp"/>
+        android:textStyle="bold"
+        android:textSize="40dp"/>
 </FrameLayout>
